@@ -1,3 +1,4 @@
+//go:build ignore
 // +build ignore
 
 package main
@@ -7,10 +8,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/fraugster/parquet-go/parquetschema"
+	"github.com/infosum/parquet-go/parquetschema"
 
-	goparquet "github.com/fraugster/parquet-go"
-	"github.com/fraugster/parquet-go/parquet"
+	goparquet "github.com/infosum/parquet-go"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 func main() {

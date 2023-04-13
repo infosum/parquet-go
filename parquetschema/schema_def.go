@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 // SchemaDefinition represents a valid textual schema definition.
@@ -90,6 +90,7 @@ func SchemaDefinitionFromColumnDefinition(c *ColumnDefinition) *SchemaDefinition
 //	precision ::= <number>
 //	scale ::= <number>
 //	all-characters ::= ? all visible characters ?
+//
 // For examples of textual schema definitions, please take a look at schema-files/*.schema.
 func ParseSchemaDefinition(schemaText string) (*SchemaDefinition, error) {
 	p := newSchemaParser(schemaText)

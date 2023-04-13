@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	goparquet "github.com/fraugster/parquet-go"
-	"github.com/fraugster/parquet-go/parquet"
-	"github.com/fraugster/parquet-go/parquetschema"
-	"github.com/fraugster/parquet-go/parquetschema/autoschema"
+	goparquet "github.com/infosum/parquet-go"
+	"github.com/infosum/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquetschema"
+	"github.com/infosum/parquet-go/parquetschema/autoschema"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

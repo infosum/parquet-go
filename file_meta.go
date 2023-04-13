@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 var magic = []byte{'P', 'A', 'R', '1'}

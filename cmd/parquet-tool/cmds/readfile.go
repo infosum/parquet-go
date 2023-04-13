@@ -9,8 +9,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	goparquet "github.com/fraugster/parquet-go"
-	"github.com/fraugster/parquet-go/parquetschema"
+	goparquet "github.com/infosum/parquet-go"
+	"github.com/infosum/parquet-go/parquetschema"
 )
 
 func catFile(w io.Writer, address string, n int) error {

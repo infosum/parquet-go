@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 func newIntStore() *ColumnStore {

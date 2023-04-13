@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	goparquet "github.com/fraugster/parquet-go"
-	"github.com/fraugster/parquet-go/parquet"
+	goparquet "github.com/infosum/parquet-go"
+	"github.com/infosum/parquet-go/parquet"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -21,7 +21,7 @@ func TestParseTypeHints(t *testing.T) {
 			ExpectedOutput: map[string]string{"foo": "boolean", "bar": "string"},
 		},
 		"simply-with-spaces": {
-			Input: "   foo  =  boolean ,	bar=string	 ",
+			Input:          "   foo  =  boolean ,	bar=string	 ",
 			ExpectedOutput: map[string]string{"foo": "boolean", "bar": "string"},
 		},
 		"empty": {

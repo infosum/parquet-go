@@ -6,8 +6,8 @@ import (
 	"io"
 	"runtime"
 
-	"github.com/fraugster/parquet-go/parquet"
-	"github.com/fraugster/parquet-go/parquetschema"
+	"github.com/infosum/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquetschema"
 )
 
 // FileReader is used to read data from a parquet file. Always use NewFileReader or a related

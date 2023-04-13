@@ -9,8 +9,8 @@ import (
 	"io/ioutil"
 	"sync"
 
-	"github.com/fraugster/parquet-go/parquet"
 	"github.com/golang/snappy"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 var (

@@ -4,10 +4,10 @@ import (
 	"log"
 	"reflect"
 
-	goparquet "github.com/fraugster/parquet-go"
-	"github.com/fraugster/parquet-go/floor"
-	"github.com/fraugster/parquet-go/parquet"
-	"github.com/fraugster/parquet-go/parquetschema"
+	goparquet "github.com/infosum/parquet-go"
+	"github.com/infosum/parquet-go/floor"
+	"github.com/infosum/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquetschema"
 )
 
 func main() {

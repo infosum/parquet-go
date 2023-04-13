@@ -6,7 +6,7 @@ import (
 	"io"
 	"math"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 type floatPlainDecoder struct {

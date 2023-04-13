@@ -8,7 +8,7 @@ import (
 	"io"
 	"math/bits"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 type dataPageReaderV2 struct {

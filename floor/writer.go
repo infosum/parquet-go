@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/araddon/dateparse"
-	goparquet "github.com/fraugster/parquet-go"
-	"github.com/fraugster/parquet-go/floor/interfaces"
-	"github.com/fraugster/parquet-go/parquet"
-	"github.com/fraugster/parquet-go/parquetschema"
+	goparquet "github.com/infosum/parquet-go"
+	"github.com/infosum/parquet-go/floor/interfaces"
+	"github.com/infosum/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquetschema"
 )
 
 // NewWriter creates a new high-level writer for parquet.

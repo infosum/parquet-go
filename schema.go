@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/fraugster/parquet-go/parquet"
-	"github.com/fraugster/parquet-go/parquetschema"
+	"github.com/infosum/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquetschema"
+	"golang.org/x/exp/slices"
 )
 
 const (
@@ -210,6 +211,9 @@ func (c *Column) getDataSize() int64 {
 		return int64(c.data.values.numValues())/8 + 1
 	}
 	_, dataSize := c.data.values.sizes()
+	for _, d := range c.data.dataPages {
+		dataSize += d.size + int64(len(d.rL.data)+len(d.dL.data))
+	}
 	return dataSize
 }
 
@@ -681,7 +685,8 @@ func recursiveFix(col *Column, colPath ColumnPath, maxR, maxD uint16, alloc *all
 
 	col.maxR = maxR
 	col.maxD = maxD
-	col.path = append(colPath, col.name)
+	col.path = slices.Clone(colPath)
+	col.path = append(col.path, col.name)
 	if col.data != nil {
 		col.data.reset(col.rep, col.maxR, col.maxD)
 		return
@@ -1039,6 +1044,10 @@ func (r *schema) DataSize() int64 {
 	}
 
 	return size
+}
+
+func (r *schema) Rows() int64 {
+	return r.numRecords
 }
 
 func (r *schema) rowGroupNumRecords() int64 {

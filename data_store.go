@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math/bits"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 // ColumnStore is the read/write implementation for a column. It buffers a single
@@ -50,6 +50,7 @@ type dataPage struct {
 	nullValues int64
 	numRows    int64
 	stats      *parquet.Statistics
+	size       int64
 }
 
 // useDictionary is simply a function to decide to use dictionary or not.
@@ -143,6 +144,7 @@ func (cs *ColumnStore) estimateSize() (total int64) {
 		total += noDictSize
 	}
 	total += int64(len(cs.rLevels.data) + len(cs.dLevels.data))
+
 	return total
 }
 
@@ -176,6 +178,7 @@ func (cs *ColumnStore) flushPage(sch *schema, force bool) error {
 			MaxValue:      cs.getPageStats().maxValue(),
 			MinValue:      cs.getPageStats().minValue(),
 		},
+		size: size,
 	})
 
 	cs.resetData()

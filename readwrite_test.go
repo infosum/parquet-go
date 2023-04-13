@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/fraugster/parquet-go/parquet"
-	"github.com/fraugster/parquet-go/parquetschema"
+	"github.com/infosum/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquetschema"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -1469,7 +1469,7 @@ func TestWriteThenReadSetSchemaDefinition(t *testing.T) {
 }
 
 func TestRepeatedInt32(t *testing.T) {
-	// this is here to somehow reproduce the issue discussed in https://github.com/fraugster/parquet-go/pull/8
+	// this is here to somehow reproduce the issue discussed in https://github.com/infosum/parquet-go/pull/8
 	sd, err := parquetschema.ParseSchemaDefinition(`message msg {
 		repeated int32 foo;
 	}`)

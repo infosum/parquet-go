@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	goparquet "github.com/fraugster/parquet-go"
+	goparquet "github.com/infosum/parquet-go"
 	"github.com/spf13/cobra"
 )
 

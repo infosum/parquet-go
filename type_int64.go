@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 type int64PlainDecoder struct {

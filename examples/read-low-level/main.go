@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	goparquet "github.com/fraugster/parquet-go"
+	goparquet "github.com/infosum/parquet-go"
 )
 
 func main() {

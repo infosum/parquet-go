@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	goparquet "github.com/fraugster/parquet-go"
-	"github.com/fraugster/parquet-go/parquet"
+	goparquet "github.com/infosum/parquet-go"
+	"github.com/infosum/parquet-go/parquet"
 	"github.com/spf13/cobra"
 )
 

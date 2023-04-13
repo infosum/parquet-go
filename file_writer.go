@@ -6,8 +6,8 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/fraugster/parquet-go/parquet"
-	"github.com/fraugster/parquet-go/parquetschema"
+	"github.com/infosum/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquetschema"
 )
 
 // FileWriter is used to write data to a parquet file. Always use NewFileWriter
@@ -26,6 +26,7 @@ type FileWriter struct {
 	createdBy       string
 
 	rowGroupFlushSize int64
+	rowsFlushSize     int64
 
 	rowGroups []*parquet.RowGroup
 
@@ -114,6 +115,14 @@ func WithMetaData(data map[string]string) FileWriterOption {
 func WithMaxRowGroupSize(size int64) FileWriterOption {
 	return func(fw *FileWriter) {
 		fw.rowGroupFlushSize = size
+	}
+}
+
+// WithMaxRowGroupRows sets the maximum number of inserted rows in a row group
+// before it will be automatically flushed.
+func WithMaxRowGroupRows(size int64) FileWriterOption {
+	return func(fw *FileWriter) {
+		fw.rowsFlushSize = size
 	}
 }
 

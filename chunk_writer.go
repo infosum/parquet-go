@@ -7,7 +7,7 @@ import (
 	"math"
 	"sort"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 func getBooleanValuesEncoder(pageEncoding parquet.Encoding) (valuesEncoder, error) {

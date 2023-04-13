@@ -8,7 +8,7 @@ import (
 	"hash/crc32"
 	"io"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 // dictionaryPage is not a real data page, so there is no need to implement the page interface

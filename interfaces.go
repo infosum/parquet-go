@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/fraugster/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquet"
 )
 
 // pageReader is an internal interface used only internally to read the pages

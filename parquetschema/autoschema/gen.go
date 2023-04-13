@@ -7,13 +7,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fraugster/parquet-go/parquet"
-	"github.com/fraugster/parquet-go/parquetschema"
+	"github.com/infosum/parquet-go/parquet"
+	"github.com/infosum/parquet-go/parquetschema"
 )
 
 // GenerateSchema auto-generates a schema definition for a provided object's type
 // using reflection. The generated schema is meant to be compatible with
-// github.com/fraugster/parquet-go/floor's reflection-based marshalling/unmarshalling.
+// github.com/infosum/parquet-go/floor's reflection-based marshalling/unmarshalling.
 func GenerateSchema(obj interface{}) (*parquetschema.SchemaDefinition, error) {
 	valueObj := reflect.ValueOf(obj)
 	columns, err := generateSchema(valueObj.Type())
